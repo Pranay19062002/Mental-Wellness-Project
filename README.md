@@ -1,12 +1,10 @@
-
 🧠 Mental Wellness Platform
 
 ✨ Introduction
 
 This project is a digital solution designed to address the challenges faced by individuals suffering from **depression** and to promote **mental wellness** through accessible, empathetic, and user-friendly technology. It was developed by a team of passionate individuals committed to making a positive impact on emotional health.
 
-
- ❗ Problem Statement
+❗ Problem Statement
 
 Depression affects millions globally, severely impacting emotional health, relationships, and quality of life. Despite the existence of treatments, accessibility and consistency in care remain significant challenges.
 
