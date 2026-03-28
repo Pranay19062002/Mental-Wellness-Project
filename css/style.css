@@ -88,11 +88,13 @@ html {
   width: 140px;
   filter: brightness(1.2) drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
   transition: var(--transition);
+  mix-blend-mode: screen; /* Knocks out the black background */
 }
 
 .logo:hover {
   transform: scale(1.05);
   filter: brightness(1.4) drop-shadow(0 0 20px rgba(16, 185, 129, 0.5));
+  mix-blend-mode: screen;
 }
 
 .links {
