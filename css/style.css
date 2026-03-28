@@ -84,17 +84,37 @@ html {
   border-bottom: 1px solid var(--glass-border);
 }
 
-.logo {
-  width: 140px;
-  filter: brightness(1.2) drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
+.text-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-main);
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
   transition: var(--transition);
-  mix-blend-mode: screen; /* Knocks out the black background */
 }
 
-.logo:hover {
-  transform: scale(1.05);
-  filter: brightness(1.4) drop-shadow(0 0 20px rgba(16, 185, 129, 0.5));
-  mix-blend-mode: screen;
+.text-logo i {
+  color: var(--primary);
+  font-size: 2rem;
+  filter: drop-shadow(0 0 10px var(--primary-glow));
+}
+
+.text-logo span {
+  color: var(--text-main);
+}
+
+.text-logo span span {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-logo:hover {
+  transform: scale(1.02);
 }
 
 .links {
