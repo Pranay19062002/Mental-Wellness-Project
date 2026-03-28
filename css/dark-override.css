@@ -1,0 +1,71 @@
+/* 
+   ZENITH PREMIUM OVERRIDES 
+   Instantly transforms legacy sub-pages into the world-class dark mode aesthetic without rewriting all layout structures.
+*/
+
+body, #main, .black-background, .bg-light, html { 
+    background-color: #020617 !important; 
+    color: #e2e8f0 !important; 
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Glassmorphism for all cards and containers */
+.card, .playlist, .inspiration-card, .menu, .v, .books iframe, .video, .info { 
+    background: rgba(2, 6, 23, 0.6) !important; 
+    border: 1px solid rgba(16, 185, 129, 0.2) !important; 
+    backdrop-filter: blur(12px) !important; 
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important; 
+    border-radius: 15px !important;
+}
+
+/* Standardize Headers */
+h1, h2, h3, h4, h5, p:not(.benefit-points), span:not(.heading-starting), a:not(.btn-border) { 
+    color: #f8fafc !important; 
+}
+
+/* Upgrade Gradients for Accents */
+.heading-title, .heading-starting, #title span { 
+    background: linear-gradient(to right, #10b981, #06b6d4) !important; 
+    -webkit-background-clip: text !important; 
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important; 
+    text-shadow: none !important;
+    font-weight: 900 !important;
+}
+
+/* Legacy Subtitles / Banners Fixes */
+#subtitle, .subtitle, .insp-content, .info {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 10px !important;
+}
+
+/* Modern Hover Effects */
+.card:hover, .playlist:hover, .inspiration-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(16, 185, 129, 0.6) !important;
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Replace ugly hr tags */
+hr {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Clean up old rounded images to match new radius */
+img {
+    border-radius: 15px !important;
+}
+
+/* Overriding old nav styling to look like the new one */
+nav.navbar, header nav {
+    background: rgba(2, 6, 23, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+nav.navbar a:hover, header nav a:hover {
+    color: #10b981 !important;
+}
