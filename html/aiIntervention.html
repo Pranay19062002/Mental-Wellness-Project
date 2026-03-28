@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mental Wellness - AI Intervention</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon-enhanced.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { overflow: hidden; } /* Prevent double scrollbars */
+    .ai-container {
+      margin-top: 80px; 
+      height: calc(100vh - 80px);
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ultra-Modern Navbar -->
+  <header style="min-height: auto;">
+    <nav class="nav" id="nav" style="background: rgba(2, 6, 23, 0.95);">
+      <div>
+        <a class="navbar-brand" href="../index.html">
+          <div class="text-logo">
+            <i class="fa-solid fa-brain"></i>
+            <span>Mental<span>Wellness</span></span>
+          </div>
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul class="links">
+          <li><a href="../index.html">Back to Hub</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Embedded Streamlit AI Backend -->
+  <iframe 
+    src="https://pranay19062002-mental-wellness-stress-level-detectormain-84y917.streamlit.app/?embed=true&theme=dark" 
+    class="ai-container" 
+    title="AI Stress Level Detector"
+    allow="camera; microphone"
+  ></iframe>
+
+</body>
+</html>
