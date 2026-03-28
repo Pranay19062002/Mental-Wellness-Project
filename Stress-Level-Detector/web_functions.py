@@ -1,6 +1,7 @@
 """This module contains necessary function needed"""
 
 # Import necessary modules
+import os
 import numpy as np
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
@@ -11,8 +12,12 @@ import streamlit as st
 def load_data():
     """This function returns the preprocessed data"""
 
+    # Dynamically locate the CSV file based on the location of this script
+    curr_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(curr_dir, 'Stress.csv')
+    
     # Load the Diabetes dataset into DataFrame.
-    df = pd.read_csv('Stress.csv')
+    df = pd.read_csv(file_path)
 
     # Rename the column names in the DataFrame.
     df.rename(columns = {"t": "bt",}, inplace = True)
