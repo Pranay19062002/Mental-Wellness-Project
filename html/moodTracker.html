@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mental Wellness - Mood Tracker</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon-enhanced.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .mood-container {
+      max-width: 800px;
+      margin: 150px auto 40px;
+      background: rgba(2, 6, 23, 0.6);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 50px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+    .mood-container h2 { font-size: 2.5rem; margin-bottom: 20px; }
+    .mood-container p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 40px; }
+    .mood-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .mood-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid transparent;
+      border-radius: 15px;
+      padding: 30px 20px;
+      width: 130px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .mood-btn i { font-size: 3rem; }
+    .mood-btn:hover { background: rgba(16, 185, 129, 0.1); border-color: #10b981; transform: translateY(-10px); }
+    .mood-btn.happy { color: #facc15; }
+    .mood-btn.calm { color: #38bdf8; }
+    .mood-btn.anxious { color: #fb923c; }
+    .mood-btn.sad { color: #818cf8; }
+    .mood-btn.angry { color: #ef4444; }
+    
+    .toast {
+      position: fixed;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.5s ease;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+      z-index: 1000;
+      opacity: 0;
+    }
+    .toast.show { bottom: 40px; opacity: 1; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header style="min-height: auto;">
+    <nav class="nav" id="nav" style="background: rgba(2, 6, 23, 0.95);">
+      <div>
+        <a class="navbar-brand" href="../index.html">
+          <div class="text-logo">
+            <i class="fa-solid fa-brain"></i>
+            <span>Mental<span>Wellness</span></span>
+          </div>
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul class="links">
+          <li><a href="../index.html">Back to Hub</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mood-container">
+    <h2>How are you feeling today?</h2>
+    <p>Select the emotion that best matches your current state. Tracking this daily helps our AI detect patterns and recommend the perfect therapies.</p>
+    
+    <div class="mood-grid">
+      <button class="mood-btn happy" onclick="logMood('Happy')">
+        <i class="fa-regular fa-face-smile-beam"></i>
+        <span>Happy</span>
+      </button>
+      <button class="mood-btn calm" onclick="logMood('Calm')">
+        <i class="fa-regular fa-face-smile"></i>
+        <span>Calm</span>
+      </button>
+      <button class="mood-btn anxious" onclick="logMood('Anxious')">
+        <i class="fa-regular fa-face-grimace"></i>
+        <span>Anxious</span>
+      </button>
+      <button class="mood-btn sad" onclick="logMood('Sad')">
+        <i class="fa-regular fa-face-frown"></i>
+        <span>Sad</span>
+      </button>
+      <button class="mood-btn angry" onclick="logMood('Angry')">
+        <i class="fa-regular fa-face-angry"></i>
+        <span>Angry</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-check-circle"></i> Mood Logged Successfully!
+  </div>
+
+  <script>
+    function logMood(mood) {
+      const toast = document.getElementById('toast');
+      toast.innerHTML = `<i class="fa-solid fa-check-circle"></i> Mood '${mood}' Logged Successfully!`;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
