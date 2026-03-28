@@ -85,8 +85,14 @@ html {
 }
 
 .logo {
-  width: 150px;
-  filter: brightness(1.2);
+  width: 140px;
+  filter: brightness(1.2) drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
+  transition: var(--transition);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.4) drop-shadow(0 0 20px rgba(16, 185, 129, 0.5));
 }
 
 .links {
@@ -133,16 +139,17 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 60%);
+  background: var(--bg-primary);
   overflow: hidden;
 }
 
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: url("https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=2672") center/cover no-repeat;
-  opacity: 0.2;
-  mix-blend-mode: overlay;
+  background: linear-gradient(to bottom, transparent, var(--bg-primary)), 
+              url("../hero-v2.png") center/cover no-repeat;
+  opacity: 0.6;
+  mix-blend-mode: color-dodge;
 }
 
 .content {
