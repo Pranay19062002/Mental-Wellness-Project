@@ -312,6 +312,15 @@ header {
   justify-content: center;
   gap: 0.5rem;
   transition: var(--transition);
+  position: static; /* Let absolute pseudo-element size relative to card */
+}
+
+/* This makes the ENTIRE card clickable, not just the text */
+.responsive a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 10;
 }
 
 .responsive a:hover {
