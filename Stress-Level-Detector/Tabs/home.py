@@ -2,6 +2,7 @@
 
 # Import necessary modules
 import streamlit as st
+import os
 
 def app():
     """This function create the home page"""
@@ -9,8 +10,10 @@ def app():
     # Add title to the home page
     st.title("Stress Level Detector")
 
-    # Add image to the home page
-    st.image("./images/home.png")
+    # Add dynamically resolved image path to the home page
+    curr_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    img_path = os.path.join(curr_dir, 'images', 'home.png')
+    st.image(img_path)
 
     # Add brief describtion of your web app
     st.markdown(
